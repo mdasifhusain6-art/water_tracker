@@ -154,6 +154,7 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
+  margin-left: auto;
 }
 
 .nav-link {
@@ -180,21 +181,86 @@ body {
 .theme-toggle {
   background: var(--bg-surface-alt);
   border: 1px solid var(--border-color);
-  color: var(--text-secondary);
-  width: 40px;
-  height: 40px;
+  color: var(--text-primary);
+  width: 42px;
+  height: 42px;
   border-radius: var(--radius-full);
   cursor: pointer;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   transition: var(--transition);
-  margin-left: 8px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  margin-left: 14px;
+  box-shadow: var(--shadow-sm);
 }
 
 .theme-toggle:hover {
   color: var(--primary);
   border-color: var(--primary);
+  transform: scale(1.05);
+  box-shadow: var(--shadow-glow);
+}
+
+.theme-icon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease;
+  position: absolute;
+  pointer-events: none;
+}
+
+/* Light mode icon display */
+html[data-theme="light"] .theme-icon.sun-icon {
+  opacity: 0;
+  transform: rotate(90deg) scale(0.4);
+}
+html[data-theme="light"] .theme-icon.moon-icon {
+  opacity: 1;
+  transform: rotate(0) scale(1);
+}
+
+/* Dark mode icon display */
+html[data-theme="dark"] .theme-icon.sun-icon {
+  opacity: 1;
+  transform: rotate(0) scale(1);
+}
+html[data-theme="dark"] .theme-icon.moon-icon {
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.4);
+}
+
+/* Icon utilities for badges, callouts, and buttons */
+.badge-icon {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.callout-icon svg {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+.tab-btn svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.btn-action svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.icon-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
 /* Hero Section */
@@ -665,14 +731,18 @@ body {
 
   .header-inner {
     height: auto;
-    padding: 10px 0;
+    padding: 12px 0 8px 0;
+    display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    align-items: center;
     justify-content: space-between;
+    gap: 12px 0;
   }
 
   .brand {
+    order: 1;
     gap: 10px;
+    flex: 0 0 auto;
   }
 
   .brand-icon {
@@ -684,14 +754,28 @@ body {
     font-size: 1.15rem;
   }
 
+  .theme-toggle {
+    order: 2;
+    width: 38px;
+    height: 38px;
+    margin-left: auto;
+    flex: 0 0 auto;
+  }
+
+  .theme-icon {
+    width: 18px;
+    height: 18px;
+  }
+
   .nav-links {
     order: 3;
     width: 100%;
+    margin-left: 0;
     display: flex;
     overflow-x: auto;
     white-space: nowrap;
     gap: 8px;
-    padding: 6px 2px 4px 2px;
+    padding: 4px 2px 6px 2px;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
   }
@@ -701,16 +785,9 @@ body {
   }
 
   .nav-link {
-    padding: 6px 14px;
+    padding: 7px 15px;
     font-size: 0.82rem;
     flex-shrink: 0;
-  }
-
-  .theme-toggle {
-    order: 2;
-    width: 36px;
-    height: 36px;
-    font-size: 0.9rem;
   }
 }
 
