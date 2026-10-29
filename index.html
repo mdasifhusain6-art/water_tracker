@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Water Tracker Legal & Compliance Center</title>
+  <meta name="description" content="Official Legal, Privacy Policy, Terms of Service, and Data Deletion Center for Water Tracker mobile app.">
+  <link rel="icon" type="image/png" href="assets/app_icon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="assets/app_icon.png" alt="Water Tracker Logo" class="brand-icon">
+        <span class="brand-text">Water Tracker</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="privacy.html" class="nav-link">Privacy Policy</a>
+        <a href="terms.html" class="nav-link">Terms of Service</a>
+        <a href="#deletion" class="nav-link">Data Deletion</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme" title="Toggle Dark/Light Mode">
+          🌙
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="badge-pill">🛡️ Trust & Transparency</div>
+      <h1 class="hero-title">Legal & Compliance Hub</h1>
+      <p class="hero-subtitle">
+        Everything you need to know about your privacy, terms of usage, and personal data rights in Water Tracker.
+      </p>
+      
+      <!-- Interactive Hub Tabs -->
+      <div class="tabs-wrapper">
+        <button class="tab-btn active" data-tab="privacy" onclick="switchTab('privacy')">🔒 Privacy Policy</button>
+        <button class="tab-btn" data-tab="terms" onclick="switchTab('terms')">📜 Terms of Service</button>
+        <button class="tab-btn" data-tab="deletion" onclick="switchTab('deletion')">🗑️ Data Deletion</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Container -->
+  <main class="container" style="padding-bottom: 80px;">
+
+    <!-- TAB 1: Privacy Policy Summary & Direct Link -->
+    <div id="tab-privacy" class="tab-content active">
+      <div class="legal-content">
+        <h2>🔒 Privacy Policy Summary</h2>
+        <p>
+          At <strong>Water Tracker</strong>, we take your personal privacy seriously. We collect only what is necessary to help you build healthy hydration habits and synchronize your logs safely.
+        </p>
+
+        <div class="callout-card success">
+          <div class="callout-icon">✅</div>
+          <div class="callout-content">
+            <strong>Google Play Data Safety Certified:</strong> All data is encrypted in transit using HTTPS/TLS. We never sell your data to data brokers or third parties.
+          </div>
+        </div>
+
+        <h3>Key Highlights</h3>
+        <ul>
+          <li><strong>What we store:</strong> Email address (for account), daily water intake logs (ml/oz), sleep/wake hours, optional weight.</li>
+          <li><strong>How it's secured:</strong> Stored in encrypted Supabase PostgreSQL cloud with Row Level Security (RLS).</li>
+          <li><strong>Offline support:</strong> Logs are cached locally on your device via Hive and synced automatically when connected.</li>
+          <li><strong>Advertising:</strong> Supported by Google AdMob using standard privacy-respecting ad identifiers.</li>
+          <li><strong>Your rights:</strong> You can view, export, or permanently delete your account & data anytime in-app or via web.</li>
+        </ul>
+
+        <div style="margin-top: 32px; display: flex; gap: 16px; flex-wrap: wrap;">
+          <a href="privacy.html" class="btn-action">Open Full Privacy Policy (Linkable) &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 2: Terms of Service Summary & Direct Link -->
+    <div id="tab-terms" class="tab-content">
+      <div class="legal-content">
+        <h2>📜 Terms of Service Summary</h2>
+        <p>
+          These Terms govern your use of the Water Tracker mobile application on Android.
+        </p>
+
+        <div class="callout-card warning">
+          <div class="callout-icon">🩺</div>
+          <div class="callout-content">
+            <strong>Medical Disclaimer:</strong> Water Tracker is a personal wellness habit tracker, not a medical device. Always consult medical professionals for specific fluid management or clinical needs.
+          </div>
+        </div>
+
+        <h3>Key Highlights</h3>
+        <ul>
+          <li><strong>Personal non-commercial use:</strong> You are granted a personal license to track and monitor your hydration.</li>
+          <li><strong>Account security:</strong> You are responsible for maintaining your login password credentials.</li>
+          <li><strong>Intellectual property:</strong> The UI designs, 3D anatomical models, and algorithms belong to the developer.</li>
+          <li><strong>Termination:</strong> You may close your account at any time via Settings &rarr; Delete Account & Data.</li>
+        </ul>
+
+        <div style="margin-top: 32px; display: flex; gap: 16px; flex-wrap: wrap;">
+          <a href="terms.html" class="btn-action">Open Full Terms of Service (Linkable) &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 3: Google Play Web-Based Data Deletion Portal -->
+    <div id="tab-deletion" class="tab-content">
+      <div class="legal-content">
+        <h2>🗑️ Account & Data Deletion Portal</h2>
+        <p>
+          In accordance with <strong>Google Play's Account Deletion Policy</strong>, Water Tracker provides two ways for users to permanently delete their account and all associated hydration data:
+        </p>
+
+        <div class="step-card-grid">
+          <div class="step-card">
+            <span class="step-badge">1</span>
+            <h4>Method 1: Instant In-App Deletion</h4>
+            <p>1. Open the Water Tracker app on your phone.<br>
+               2. Navigate to <strong>Settings</strong> tab.<br>
+               3. Scroll down to the <strong>ACCOUNT</strong> section.<br>
+               4. Tap <strong>Delete Account & Data</strong> and confirm.<br>
+               5. Your account, profile, and all water logs are immediately deleted.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <span class="step-badge">2</span>
+            <h4>Method 2: Web Deletion Request</h4>
+            <p>If you uninstalled the app or lost device access, you can submit a deletion request via email directly below. We verify and permanently remove your records within 7 business days.</p>
+          </div>
+        </div>
+
+        <div class="callout-card danger">
+          <div class="callout-icon">⚠️</div>
+          <div class="callout-content">
+            <strong>What data is deleted?</strong><br>
+            - Your authentication record (Email & user ID)<br>
+            - Your user profile (Weight, daily goal, sleep/wake hours)<br>
+            - All historical water entries, timestamps, and streak logs<br>
+            <em>This action is irreversible and cannot be recovered.</em>
+          </div>
+        </div>
+
+        <h3 style="margin-top: 32px;">Submit Web Deletion Request</h3>
+        <p>Click the button below to generate a pre-formatted deletion request email from your registered email account:</p>
+
+        <div style="margin-top: 18px;">
+          <a href="mailto:dhtech800@gmail.com?subject=Water Tracker%20Account%20and%20Data%20Deletion%20Request&body=Hello%20Water Tracker%20Support%20Team%2C%0A%0AI%20am%20requesting%20the%20permanent%20deletion%20of%20my%20Water Tracker%20account%20and%20all%20associated%20data%20(intake%20history%20and%20profile).%0A%0AMy%20Registered%20Email%20Address%3A%20%5BInsert%20your%20email%20here%5D%0A%0AThank%20you." class="btn-action">
+            ✉️ Email Deletion Request (dhtech800@gmail.com)
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-copy">
+        &copy; 2026 Water Tracker. All rights reserved.
+      </div>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="#deletion" onclick="switchTab('deletion')">Data Deletion</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Theme & Tabs Script -->
+  <script>
+    // Theme Switcher
+    const toggleBtn = document.getElementById('themeToggle');
+    const htmlEl = document.documentElement;
+
+    const savedTheme = localStorage.getItem('water-tracker-theme') || 
+      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    htmlEl.setAttribute('data-theme', savedTheme);
+    toggleBtn.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+
+    toggleBtn.addEventListener('click', () => {
+      const current = htmlEl.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      htmlEl.setAttribute('data-theme', next);
+      localStorage.setItem('water-tracker-theme', next);
+      toggleBtn.textContent = next === 'dark' ? '☀️' : '🌙';
+    });
+
+    // Tab Switching
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-tab') === tabId);
+      });
+      document.querySelectorAll('.tab-content').forEach(c => {
+        c.classList.remove('active');
+      });
+
+      const targetTab = document.getElementById('tab-' + tabId);
+      if (targetTab) {
+        targetTab.classList.add('active');
+      }
+    }
+
+    // Auto switch tab if URL has hash (e.g. #deletion)
+    if (window.location.hash === '#deletion') {
+      switchTab('deletion');
+    }
+  </script>
+</body>
+</html>
