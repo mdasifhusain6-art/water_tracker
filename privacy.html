@@ -6,7 +6,7 @@
   <title>Privacy Policy — Water Tracker</title>
   <meta name="description" content="Official Privacy Policy and Data Safety Disclosures for Water Tracker on Google Play.">
   <link rel="icon" type="image/png" href="app_icon.png">
-  <link rel="stylesheet" href="styles.css?v=2.2">
+  <link rel="stylesheet" href="styles.css?v=2.3">
 </head>
 <body>
 
@@ -18,21 +18,41 @@
         <span class="brand-text">Water Tracker</span>
       </a>
 
-      <nav class="nav-links">
+      <nav class="nav-links" aria-label="Main Navigation">
         <a href="index.html" class="nav-link">Overview</a>
         <a href="privacy.html" class="nav-link active">Privacy Policy</a>
         <a href="terms.html" class="nav-link">Terms of Service</a>
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme" title="Toggle Dark/Light Mode">
-          🌙
-        </button>
       </nav>
+
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme" title="Toggle Dark/Light Mode">
+        <svg class="theme-icon sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="theme-icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
     </div>
   </header>
 
   <!-- Hero Banner -->
   <section class="hero-section">
     <div class="container">
-      <div class="badge-pill">🛡️ Legal & Data Safety</div>
+      <div class="badge-pill">
+        <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          <polyline points="9 12 11 14 15 10"></polyline>
+        </svg>
+        <span>Legal & Data Safety</span>
+      </div>
       <h1 class="hero-title">Privacy Policy</h1>
       <p class="hero-subtitle">
         Your privacy and trust are paramount. Learn how Water Tracker protects, collects, and respects your personal hydration data.
@@ -79,7 +99,11 @@
         </p>
         
         <div class="callout-card success">
-          <div class="callout-icon">💧</div>
+          <div class="callout-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+            </svg>
+          </div>
           <div class="callout-content">
             <strong>Core Privacy Pledge:</strong> We do <em>not</em> sell, rent, or trade your personal health logs, weight, or contact information to data brokers, third-party advertisers, or marketing agencies.
           </div>
@@ -208,7 +232,13 @@
         </div>
 
         <div class="callout-card warning">
-          <div class="callout-icon">⚠️</div>
+          <div class="callout-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+              <line x1="12" y1="9" x2="12" y2="13"></line>
+              <line x1="12" y1="17" x2="12.01" y2="17"></line>
+            </svg>
+          </div>
           <div class="callout-content">
             <strong>Irreversible Action:</strong> Deletion removes your email, profile preferences, and all historical hydration intake records from our active databases permanently.
           </div>
@@ -243,7 +273,12 @@
         </p>
 
         <div class="callout-card">
-          <div class="callout-icon">📬</div>
+          <div class="callout-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </div>
           <div class="callout-content">
             <strong>Water Tracker Support & Privacy Team</strong><br>
             Developer: Md Asif Husain<br>
@@ -252,7 +287,13 @@
         </div>
 
         <p style="margin-top: 24px;">
-          <a href="terms.html" class="btn-action">Read Terms of Service &rarr;</a>
+          <a href="terms.html" class="btn-action">
+            Read Terms of Service
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
         </p>
       </section>
 
@@ -283,14 +324,12 @@
     const savedTheme = localStorage.getItem('water-tracker-theme') || 
       (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
     htmlEl.setAttribute('data-theme', savedTheme);
-    toggleBtn.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
 
     toggleBtn.addEventListener('click', () => {
-      const current = htmlEl.getAttribute('data-theme');
+      const current = htmlEl.getAttribute('data-theme') || 'light';
       const next = current === 'dark' ? 'light' : 'dark';
       htmlEl.setAttribute('data-theme', next);
       localStorage.setItem('water-tracker-theme', next);
-      toggleBtn.textContent = next === 'dark' ? '☀️' : '🌙';
     });
 
     // Active Sidebar ScrollSpy
