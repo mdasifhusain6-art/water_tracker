@@ -9,40 +9,7 @@
   --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 
-  /* Color Tokens - Light Mode */
-  --bg-body: #f8fafc;
-  --bg-surface: #ffffff;
-  --bg-surface-alt: #f1f5f9;
-  --bg-surface-elevated: #ffffff;
-  --border-color: #e2e8f0;
-  --border-light: #edf2f7;
-  
-  --text-primary: #0f172a;
-  --text-secondary: #475569;
-  --text-muted: #64748b;
-  
-  --primary: #0077b6;
-  --primary-light: #00b4d8;
-  --primary-glow: rgba(0, 180, 216, 0.15);
-  --accent: #00e5ff;
-  --success: #10b981;
-  --warning: #f59e0b;
-  --danger: #ef4444;
-
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.06), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
-  --shadow-lg: 0 12px 24px -4px rgba(0, 0, 0, 0.08);
-  --shadow-glow: 0 0 20px rgba(0, 180, 216, 0.25);
-
-  --radius-sm: 8px;
-  --radius-md: 14px;
-  --radius-lg: 20px;
-  --radius-full: 9999px;
-
-  --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-[data-theme="dark"] {
+  /* Permanent Dark Theme Color Tokens */
   --bg-body: #070c14;
   --bg-surface: #0f172a;
   --bg-surface-alt: #131d33;
@@ -58,11 +25,21 @@
   --primary-light: #38bdf8;
   --primary-glow: rgba(0, 229, 255, 0.15);
   --accent: #00e5ff;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #ef4444;
 
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
   --shadow-md: 0 4px 8px -1px rgba(0, 0, 0, 0.5);
   --shadow-lg: 0 14px 28px -4px rgba(0, 0, 0, 0.6);
   --shadow-glow: 0 0 25px rgba(0, 229, 255, 0.2);
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+
+  --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Base Reset */
@@ -106,15 +83,12 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(15, 23, 42, 0.94);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border-color);
   transition: var(--transition);
-}
-
-[data-theme="dark"] .site-header {
-  background-color: rgba(15, 23, 42, 0.85);
+  width: 100%;
 }
 
 .header-inner {
@@ -125,26 +99,30 @@ body {
 }
 
 .brand {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 12px;
   text-decoration: none;
   color: var(--text-primary);
+  flex-shrink: 0;
+  padding: 6px 0;
 }
 
 .brand-icon {
   width: 42px;
   height: 42px;
-  border-radius: var(--radius-md);
-  object-fit: cover;
-  box-shadow: var(--shadow-glow);
+  border-radius: 12px;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+  box-shadow: 0 4px 16px rgba(0, 180, 216, 0.35);
 }
 
 .brand-text {
   font-size: 1.25rem;
   font-weight: 800;
   letter-spacing: -0.02em;
-  background: linear-gradient(135deg, var(--text-primary), var(--primary));
+  background: linear-gradient(135deg, #ffffff, var(--primary-light));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -153,12 +131,12 @@ body {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   margin-left: auto;
 }
 
 .nav-link {
-  padding: 8px 16px;
+  padding: 8px 18px;
   font-size: 0.9rem;
   font-weight: 600;
   color: var(--text-secondary);
@@ -168,7 +146,7 @@ body {
 }
 
 .nav-link:hover {
-  color: var(--primary);
+  color: var(--primary-light);
   background-color: var(--primary-glow);
 }
 
@@ -176,60 +154,6 @@ body {
   color: #ffffff;
   background: linear-gradient(135deg, #0077b6, #00b4d8);
   box-shadow: var(--shadow-sm);
-}
-
-.theme-toggle {
-  background: var(--bg-surface-alt);
-  border: 1px solid var(--border-color);
-  color: var(--text-primary);
-  width: 42px;
-  height: 42px;
-  border-radius: var(--radius-full);
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: var(--transition);
-  position: relative;
-  overflow: hidden;
-  flex-shrink: 0;
-  margin-left: 14px;
-  box-shadow: var(--shadow-sm);
-}
-
-.theme-toggle:hover {
-  color: var(--primary);
-  border-color: var(--primary);
-  transform: scale(1.05);
-  box-shadow: var(--shadow-glow);
-}
-
-.theme-icon {
-  width: 20px;
-  height: 20px;
-  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease;
-  position: absolute;
-  pointer-events: none;
-}
-
-/* Light mode icon display */
-html[data-theme="light"] .theme-icon.sun-icon {
-  opacity: 0;
-  transform: rotate(90deg) scale(0.4);
-}
-html[data-theme="light"] .theme-icon.moon-icon {
-  opacity: 1;
-  transform: rotate(0) scale(1);
-}
-
-/* Dark mode icon display */
-html[data-theme="dark"] .theme-icon.sun-icon {
-  opacity: 1;
-  transform: rotate(0) scale(1);
-}
-html[data-theme="dark"] .theme-icon.moon-icon {
-  opacity: 0;
-  transform: rotate(-90deg) scale(0.4);
 }
 
 /* Icon utilities for badges, callouts, and buttons */
@@ -731,51 +655,43 @@ html[data-theme="dark"] .theme-icon.moon-icon {
 
   .header-inner {
     height: auto;
-    padding: 12px 0 8px 0;
+    padding: 16px 0 12px 0;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .brand {
-    order: 1;
-    gap: 10px;
-    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 2px 0;
   }
 
   .brand-icon {
-    width: 36px;
-    height: 36px;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    object-fit: contain;
+    flex-shrink: 0;
+    box-shadow: 0 4px 14px rgba(0, 180, 216, 0.25);
   }
 
   .brand-text {
-    font-size: 1.15rem;
-  }
-
-  .theme-toggle {
-    order: 2;
-    width: 38px;
-    height: 38px;
-    margin-left: auto;
-    flex: 0 0 auto;
-  }
-
-  .theme-icon {
-    width: 18px;
-    height: 18px;
+    font-size: 1.2rem;
   }
 
   .nav-links {
-    order: 3;
     width: 100%;
     margin-left: 0;
     display: flex;
     overflow-x: auto;
     white-space: nowrap;
     gap: 8px;
-    padding: 4px 2px 6px 2px;
+    padding: 2px 2px 4px 2px;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
   }
@@ -785,8 +701,8 @@ html[data-theme="dark"] .theme-icon.moon-icon {
   }
 
   .nav-link {
-    padding: 7px 15px;
-    font-size: 0.82rem;
+    padding: 7px 16px;
+    font-size: 0.84rem;
     flex-shrink: 0;
   }
 }
